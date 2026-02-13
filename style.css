@@ -12,3 +12,11 @@ input {
 button {
   padding: 6px 12px;
 }
+button {
+  margin: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
