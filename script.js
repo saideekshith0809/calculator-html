@@ -1,34 +1,21 @@
-function add() {
-  const n1 = Number(document.getElementById("num1").value);
-  const n2 = Number(document.getElementById("num2").value);
+const display = document.getElementById('display');
 
-  document.getElementById("result").innerText =
-    "Result: " + (n1 + n2);
-}
-function subtract() {
-  const n1 = Number(document.getElementById("num1").value);
-  const n2 = Number(document.getElementById("num2").value);
-function multiply() {
-  const n1 = Number(document.getElementById("num1").value);
-  const n2 = Number(document.getElementById("num2").value);
-
-  document.getElementById("result").innerText =
-    "Result: " + (n1 * n2);
+function appendValue(value) {
+  display.value += value;
 }
 
-  document.getElementById("result").innerText =
-    "Result: " + (n1 - n2);
+function clearDisplay() {
+  display.value = '';
 }
 
-  function divide() {
-  const n1 = Number(document.getElementById("num1").value);
-  const n2 = Number(document.getElementById("num2").value);
+function deleteLast() {
+  display.value = display.value.slice(0, -1);
+}
 
-  if (n2 === 0) {
-    document.getElementById("result").innerText =
-      "Cannot divide by zero";
-  } else {
-    document.getElementById("result").innerText =
-      "Result: " + (n1 / n2);
+function calculate() {
+  try {
+    display.value = eval(display.value.replace('%', '/100'));
+  } catch (error) {
+    display.value = 'Error';
   }
 }
