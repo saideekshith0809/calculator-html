@@ -7,17 +7,35 @@
 </head>
 <body>
 
-  <h1>Simple Calculator</h1>
+  <div class="calculator">
+    <input type="text" id="display" disabled>
 
-  <input type="number" id="num1" placeholder="Number 1">
-  <input type="number" id="num2" placeholder="Number 2">
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="deleteLast()">⌫</button>
+      <button onclick="appendValue('%')">%</button>
+      <button onclick="appendValue('/')">÷</button>
 
-  <button onclick="add()">Add</button>
+      <button onclick="appendValue('7')">7</button>
+      <button onclick="appendValue('8')">8</button>
+      <button onclick="appendValue('9')">9</button>
+      <button onclick="appendValue('*')">×</button>
 
-  <p id="result"></p>
-<button onclick="subtract()">Subtract</button>
-<button onclick="multiply()">Multiply</button>
-<button onclick="divide()">Divide</button>
+      <button onclick="appendValue('4')">4</button>
+      <button onclick="appendValue('5')">5</button>
+      <button onclick="appendValue('6')">6</button>
+      <button onclick="appendValue('-')">−</button>
+
+      <button onclick="appendValue('1')">1</button>
+      <button onclick="appendValue('2')">2</button>
+      <button onclick="appendValue('3')">3</button>
+      <button onclick="appendValue('+')">+</button>
+
+      <button onclick="appendValue('0')" class="zero">0</button>
+      <button onclick="appendValue('.')">.</button>
+      <button onclick="calculate()" class="equals">=</button>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
